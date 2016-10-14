@@ -237,7 +237,9 @@ def execute_go(direction):
 
     exits = current_room["exits"]
     #current_room = move(exits,direction)
+    
     if is_valid_exit(exits, direction) == True:
+        current_room = move(exits,direction)
         return current_room
     else:
         print ("You cannot go there.")
